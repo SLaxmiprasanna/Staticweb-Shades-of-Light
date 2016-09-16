@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title> VALIDATION </title>
+        <script type = "text/javascript">            
+            function val1() {
+         var pword = document.getElementById("a3").value;
+                if(pword.length == 0)
+                    document.getElementById("c3").innerHTML = "enter password";
+                else if(pword.length <= 6 || pword.length >= 8)                   
+                    document.getElementById("c3").innerHTML = "";
+                else
+                    document.getElementById("c3").innerHTML = " Enter a valid password";             
+                var mail = document.getElementById("a4").value;
+                var format = /\S+@\S+\.\S+/;
+                if(mail.length == 0)
+                    document.getElementById("c4").innerHTML = "Enter mail id";
+                else if(mail.match(format))
+                    document.getElementById("c4").innerHTML = "";
+                else 
+                    document.getElementById("c4").innerHTML = "Enter a valid email id";
+ }
+                </script>
+<style>
+#z1{
+    color : white;
+    margin-left : 35px;
+    background : #2b4540;  
+    height : 35px;
+    width : 100px;
+   
+}
+#b1{
+   color : white;
+}
+
+</style>
+<style>
+body {
+    background-image:url("face.jpg");
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+}
+</style>   
+ </head>
+    <body >
+    <a href = "main2.html"style="text-decoration:none;"><input type = "button" value = "Back" name = "Back" id = "z1"></a>
+        <center>            
+            <form name = "myform">
+                <table  border = "0" cellpadding = "5" bgcolor = "grey" >
+                    <tr><td valign ="left">
+                    <tr><b><h1>Sign In To Your Account</h1></b> 
+                      <td>Email id:</td> <td> <input type = "text" name = "a4" id = "a4">
+                            <div name = "c4" id = "c4"> </div> </td></tr>
+                    <tr><td>password:</td><td><input type = "password"  name = "a3" id = "a3">
+                             <div name = "c3" id = "c3"> </div> </td></tr>
+  <tr><td><a href = "main2.html" style="text-decoration:none;"><input type = "button" value = "Sign in" name = "b1" id = "b1" style = "background-color:#2b4540"></a></td></tr>
+       <div> <center font_size = "10"> <tr><td><b>Don't have an account</b></td></tr></center></div>
+<tr> <td><a href= "createaccount.html"style="text-decoration:none;"> <input id = "create" name = "create" type = "button" value = "Create new account" style = "background-color:#2b4540;color:white"/></a></td>
+</tr> 
+   </table>
+            </form>
+        </center>
+    </body>
+</html>
+ 

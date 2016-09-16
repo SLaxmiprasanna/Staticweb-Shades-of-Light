@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>create account</title>
+  <script type = "text/javascript">            
+            function val1() {
+ var Fname = document.getElementById("a1").value;               
+                var letters = /^[A-Za-z]+$/;
+                if(Fname.length == 0)
+                    document.getElementById("c1").innerHTML = "enter user name";              
+                else if(Fname.match(letters))
+                    document.getElementById("c1").innerHTML = " ";
+                else 
+                    document.getElementById("c1").innerHTML = "Enter a  valid name";
+  var Lname = document.getElementById("a2").value;               
+                var letters = /^[A-Za-z]+$/;
+                if(Lname.length == 0)
+                    document.getElementById("c2").innerHTML = "enter user name";              
+                else if(Lname.match(letters))
+                    document.getElementById("c2").innerHTML = " ";
+                else  
+                    document.getElementById("c2").innerHTML = "Enter a  valid name";
+       var mail = document.getElementById("a4").value;
+                var format = /\S+@\S+\.\S+/;
+                if(mail.length == 0)
+                    document.getElementById("c4").innerHTML = "Enter mail id";
+                else if(mail.match(format))
+                    document.getElementById("c4").innerHTML = "";
+                else 
+                    document.getElementById("c4").innerHTML = "Enter a valid email id";
+       var pword = document.getElementById("a3").value;
+                if(pword.length == 0)
+                    document.getElementById("c3").innerHTML = "enter password";
+                else if(pword.length <= 6 || pword.length >= 8)                   
+                    document.getElementById("c3").innerHTML = "enter a valid password";
+                else
+                    document.getElementById("c3").innerHTML = " ";          
+       var Cpword = document.getElementById("a5").value;
+                if(Cpword.length == 0)
+                    document.getElementById("c5").innerHTML = "enter password";
+                else if(Cpword.length <= 6 || Cpword.length >= 8)                   
+                    document.getElementById("c5").innerHTML = "enter a valid password";
+                else
+                    document.getElementById("c5").innerHTML = " ";          
+                if(Cpword != pword)
+                    document.getElementById("c5").innerHTML = "In correct password please try again";       
+ }
+</script>
+
+<style>
+   #c1{
+      color : red;
+      }
+    #c2{
+      color : red;
+      }
+ #c3{
+      color : red;
+      }
+ #c4{
+      color : red;
+      }
+ #c5{
+      color : red;
+      }
+  #p1{
+     position : left;
+     margin-left : 35;
+}
+  #f1{
+     margin-left:25;
+}
+#z1{
+    margin-left : 35px;
+    background :white;	
+	height : 35px;
+	width : 100px;	
+	border : 5;
+	font-color : red;	
+}
+</style>  
+<style>
+body {
+                    background-image:url("face.jpg");-moz-background-size: cover;
+                 -webkit-background-size: cover;
+                   background-size: cover;
+                       background-position: top center !important;
+               background-repeat: no-repeat !important;
+                           background-attachment: fixed;
+             }
+
+</style>   
+</head>
+<body>
+<form name = "form" id = "f1">
+       <a href = "sign.html"><input type = "button" id = "z1" value = "Back" name = "back"></a>
+       <center><serif><b>Create an Account</center><br><br>  
+  <p id = "p1"> 
+
+
+   <table border = 0 >
+   <tr> <td><serif><b>First name:</td><td><input type = "text" name = "a1" id = "a1" autofocus>
+                            <div name = "c1" id = "c1"> </div> </td>
+   <td><serif><b>Last name:</td><td><input type = "text" name = "a2" id = "a2">
+                            <div name = "c2" id = "c2"> </div> </td></tr><br>
+   <tr> <td><serif><b>Email id:</td> <td> <input type = "text" name = "a4" id = "a4" placeholder = "xyz@gmail.com" >
+                            <div name = "c4" id = "c4"> </div> </td></tr>
+   <tr> <td><serif><b>password:</td><td><input type = "password"  name = "a3" id = "a3">
+                            <div name = "c3" id = "c3"> </div> </td>
+        <td><serif><b>Confirm password:</td><td><input type = "password"  name = "a5" id = "a5">
+		            <div name = "c5" id = "c5"> </div> </td></tr>
+</table><br>
+ <tr> <td><a href ="sign.html" style="text-decoration:none;"> <input type = "button" value = "create account" name = "b1" id = "b1" onclick = "val1()" style ="background-color:#2b4540;color:white"/>
+
+   
+     </form>
+</body>
+</html>

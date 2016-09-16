@@ -1,0 +1,12 @@
+ul{list-style: none;padding: 0px;margin: 0px;}
+  ul li {display: block;position: relative;float: left;}
+  li ul {display: none;}
+  ul li a {display: block;background: none;padding: 10px 25px 10px 25px;text-decoration: none;
+           white-space: nowrap;color: white;}
+  ul li a:hover {background: black;}
+  li:hover ul {display: block; position: absolute;}
+  li:hover li {float: none;}
+  li:hover a {background: black;}
+  li:hover li a:hover {background-color:rgba(0,0,0);}
+  #drop-nav li ul li {border-top: 10px; float:center;}
+~                             
